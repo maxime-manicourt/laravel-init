@@ -15,3 +15,4 @@ Route::get('/', 'MonControlleur@index');
 Route::get('/hello', 'Welcome@hello');
 Route::get('/personnes', 'MonControlleur@personnes');
 Route::get('/personne/{id}', 'MonControlleur@personne')->where('id', '[0-9]+');
+Route::get('/film/{id}', 'MonControlleur@detailFilm')->where('id', '[0-9]+');

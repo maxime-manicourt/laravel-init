@@ -9,4 +9,8 @@ class Film extends Model
     protected $table = 'film';
     public $timestamps = false;
 
+    public function realisateur() {
+        return $this->belongsTo('App\Personne', 'idRealisateur');
+    }
+
 }

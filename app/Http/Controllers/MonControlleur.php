@@ -15,7 +15,16 @@ class MonControlleur extends Controller
 
     function personne($id) {
         $personne = Personne::find($id);
+        if($personne == false)
+            return abort('404');
         return view('personne', ['personne' => $personne]);
+    }
+
+    function detailFilm($id) {
+        $film = Film::find($id);
+        if($film == false)
+            return abort('404');
+        return view('film', ['film' => $film]);
     }
 
     function index() {

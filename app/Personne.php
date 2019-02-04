@@ -14,4 +14,10 @@ class Personne extends Model
 
         //SELECT * FROM film WHERE idRealisateur=$this->id
     }
+
+    public function joueDans() {
+        return $this->belongsToMany("App\Film", "joue", "idActeur", "idFilm");
+
+        // SELECT * FROM film JOIN ON joue ON idFilm=film.id WHERE idActeurs=$this->id
+    }
 }

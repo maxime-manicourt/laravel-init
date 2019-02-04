@@ -12,4 +12,12 @@
             @endforeach
         </ul>
 
+        <h4>Acteur/rice dans</h4>
+
+        <ul>
+            @foreach($personne->joueDans as $a)
+                <li>{{$a->titre}}</li>
+            @endforeach
+        </ul>
+
 @endsection
