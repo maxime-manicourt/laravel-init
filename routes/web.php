@@ -14,3 +14,4 @@
 Route::get('/', 'MonControlleur@index');
 Route::get('/hello', 'Welcome@hello');
 Route::get('/personnes', 'MonControlleur@personnes');
+Route::get('/personne/{id}', 'MonControlleur@personne')->where('id', '[0-9]+');

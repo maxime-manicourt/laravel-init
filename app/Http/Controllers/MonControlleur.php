@@ -13,6 +13,11 @@ class MonControlleur extends Controller
         return view('personnes', ['personnes' => $personnes]);
     }
 
+    function personne($id) {
+        $personne = Personne::find($id);
+        return view('personne', ['personne' => $personne]);
+    }
+
     function index() {
         return "Bonjour mon p'tit pote";
     }
